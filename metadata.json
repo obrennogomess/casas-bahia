@@ -1,0 +1,6 @@
+{
+  "name": "Arremata+",
+  "description": "Encontre leilões de eletrônicos, móveis, veículos e mais. Dê seu lance com segurança e acompanhe em tempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

